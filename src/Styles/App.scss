@@ -1,0 +1,241 @@
+
+$dark:rgb(36, 3, 30);
+$primary:#9B4746;
+$secondary:#EFB554;
+$muted:rgb(46, 32, 43);
+
+@mixin tablet{
+    @media screen and (max-width:768px){
+        @content
+    }
+};
+@mixin card-point{
+    @media screen and (max-width:965px){
+        @content
+    }
+};
+
+@mixin list{
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width:60rem;
+    @include card-point{
+        width:40rem;
+    }
+    @include tablet{
+        width:90%;
+    }
+};
+
+
+html, #root{
+    background-color:#f5f5f5;
+}
+#root{
+    max-width:100%;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:$dark;
+    height:60px;
+    a{
+        margin: auto 1rem;
+        text-decoration:none;
+        color:white;
+      
+        font-weight:800;
+    }
+
+    &-container{
+        display:flex;
+        a{
+            font-weight:500;
+        }
+    }
+   
+}
+
+
+.home{
+    width:100%;
+    height: calc(100vh - 60px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    &-container{
+        text-align: center;
+        margin-bottom:1rem;
+    }
+    &-title{
+        color:$primary;
+        font-size:4rem;
+    }
+    &-text{
+        font-size: 1.2em;
+        vertical-align:middle;
+    }
+    &-button-container{
+        display:flex;
+        justify-content:center;
+    }
+    &-greet{
+        margin-top:5rem;
+        font-size:2rem;
+        font-weight:600;
+    }
+
+}
+
+
+
+.button-link{
+    text-decoration: none;
+    color:white;
+    background-color:$secondary;
+    border:none;
+    border-radius: 4px;
+    margin:1rem;
+    div{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:.5rem 1rem;
+        height:100%;
+        width:100%;
+        border-radius:4px;
+    }
+    &.success{
+        background: rgb(41, 131, 41);
+    }
+    &.disabled{
+        filter:brightness(.7)
+    }
+    &:hover{ 
+        color:white;
+        &>div{
+        // backdrop-filter: brightness(.5);
+        background-color:rgba(0,0,0,.2);
+        }
+    }
+}
+
+.button-block{
+    width:100%;
+    margin:0;
+    margin-bottom:1rem;
+}
+
+.form{
+    width:30rem;
+    @include tablet{
+        width:90%;
+    }
+    &-title{
+        margin-top:2rem;
+        text-align:center;
+    }
+    input{
+        margin-top:5px;
+    }
+}
+
+.mcard{
+    padding:1rem;
+    margin:1rem;
+    min-height:6rem;
+    width:100%; 
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around; 
+    border-radius: 4px;
+    background-color:white;
+    box-shadow: 1px 1px  4px $muted;
+
+    &.clickable{
+        &:hover{
+            box-shadow: 3px 3px 8px $muted;
+        }
+
+    }
+    &-title{
+        font-size:1.2rem;
+    }
+    &-container{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    &-description{
+        color:#3d3a3a;
+    }
+
+}
+
+.card-list{
+    @include list;
+}
+
+.company-info{
+    @include list;
+    &-title{
+        margin-top:2rem;
+    }
+    &-description{
+        text-align:center;
+        margin:1rem auto .5rem auto;
+    }
+}
+
+.profile-info{
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+
+    &-title{
+        margin-top:2rem;
+    }
+}
+
+
+.search-bar{
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    &-input{
+        display:flex;
+        padding: .5rem;
+        margin:1rem;
+        margin-left:0;
+        font-size:1.3rem;
+        border-radius: 4px;
+    }
+    .button-link{
+        margin-right: 0;
+        width:8rem;
+        &>div{
+            font-size:1.3rem;
+        }
+    }
+}
+
+.job-list{
+    @include list;
+}
+
+.error-message{
+    color:red;
+}

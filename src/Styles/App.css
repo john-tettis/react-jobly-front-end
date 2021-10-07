@@ -1,0 +1,342 @@
+html, #root {
+  background-color: #f5f5f5;
+}
+
+#root {
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #24031e;
+  height: 60px;
+}
+
+.navbar a {
+  margin: auto 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+
+.navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-container a {
+  font-weight: 500;
+}
+
+.home {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.home-title {
+  color: #9B4746;
+  font-size: 4rem;
+}
+
+.home-text {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.home-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-greet {
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.button-link {
+  text-decoration: none;
+  color: white;
+  background-color: #EFB554;
+  border: none;
+  border-radius: 4px;
+  margin: 1rem;
+}
+
+.button-link div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem 1rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.button-link.success {
+  background: #298329;
+}
+
+.button-link.disabled {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
+.button-link:hover {
+  color: white;
+}
+
+.button-link:hover > div {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.button-block {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.form {
+  width: 30rem;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    width: 90%;
+  }
+}
+
+.form-title {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.form input {
+  margin-top: 5px;
+}
+
+.mcard {
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 6rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 4px;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 4px #2e202b;
+          box-shadow: 1px 1px 4px #2e202b;
+}
+
+.mcard.clickable:hover {
+  -webkit-box-shadow: 3px 3px 8px #2e202b;
+          box-shadow: 3px 3px 8px #2e202b;
+}
+
+.mcard-title {
+  font-size: 1.2rem;
+}
+
+.mcard-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mcard-description {
+  color: #3d3a3a;
+}
+
+.card-list {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60rem;
+}
+
+@media screen and (max-width: 965px) {
+  .card-list {
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-list {
+    width: 90%;
+  }
+}
+
+.company-info {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60rem;
+}
+
+@media screen and (max-width: 965px) {
+  .company-info {
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .company-info {
+    width: 90%;
+  }
+}
+
+.company-info-title {
+  margin-top: 2rem;
+}
+
+.company-info-description {
+  text-align: center;
+  margin: 1rem auto .5rem auto;
+}
+
+.profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-info-title {
+  margin-top: 2rem;
+}
+
+.search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.search-bar-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .5rem;
+  margin: 1rem;
+  margin-left: 0;
+  font-size: 1.3rem;
+  border-radius: 4px;
+}
+
+.search-bar .button-link {
+  margin-right: 0;
+  width: 8rem;
+}
+
+.search-bar .button-link > div {
+  font-size: 1.3rem;
+}
+
+.job-list {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60rem;
+}
+
+@media screen and (max-width: 965px) {
+  .job-list {
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .job-list {
+    width: 90%;
+  }
+}
+
+.error-message {
+  color: red;
+}
+/*# sourceMappingURL=App.css.map */
